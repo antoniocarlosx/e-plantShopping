@@ -1,0 +1,27 @@
+:root {
+  /* Fundo Principal (Landing / Página Inicial) */
+  --bg-main: #143626;            /* Verde floresta bem profundo para dar contraste máximo aos textos */
+  --bg-surface: #ffffff;         /* Branco para a lista de produtos (após o clique) */
+  --bg-card: rgba(255, 255, 255, 0.06);
+
+  /* Tipografia */
+  --text-on-dark: #ffffff;       /* Texto branco (ótimo para "Paradise Nursery" e "Bem vindo ao") */
+  --text-muted: #a3ccab;         /* Verde pastel claro para subtítulos e parágrafos sobre o fundo escuro */
+  --text-dark: #111827;          /* Cinza quase preto para os cards de produtos no fundo branco */
+
+  /* Ações e Botões (O segredo do contraste está aqui) */
+  --btn-bg: #eebc1d;             /* Amarelo mostarda vibrante: destaca o botão imediatamente na folhagem */
+  --btn-bg-hover: #d9a712;       /* Tom ligeiramente mais escuro para o efeito de passar o mouse */
+  --btn-text: #143626;           /* Texto do botão em verde escuro, garantindo leitura perfeita */
+
+  /* Detalhes e Bordas */
+  --border-subtle: rgba(255, 255, 255, 0.1);
+  --accent: #52b788;             
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
