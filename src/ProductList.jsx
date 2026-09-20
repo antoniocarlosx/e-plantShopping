@@ -6,11 +6,14 @@ import plants from "./plants.json";
 
 function ProductList({ onHomeClick }) {
   const [showCart, setShowCart] = useState(false);
-  const [showPlants, setShowPlants] = useState(false); 
+  const [showPlants, setShowPlants] = useState(false);
 
-  const plantArray = plants;
+  const plantsArray = plants;
 
-  const navLinks = [{ label: "Plantas", href: "#plants" }];
+  const navLinks = plantsArray.map((item) => ({
+    label: item.category,
+    href: `#${item.category.toLowerCase().replace(/\s+/g, "-")}`,
+  }));
 
   const iconLink =
     "https://cdn.pixabay.com/photo/2020/08/05/13/12/eco-5465432_1280.png";
@@ -22,14 +25,13 @@ function ProductList({ onHomeClick }) {
 
   const handleCartClick = (e) => {
     e.preventDefault();
-   if(showCart === false){
-        setShowCart(true)
-   } else{
-    setShowCart(false)
-   }
+    if (showCart === false) {
+      setShowCart(true);
+    } else {
+      setShowCart(false);
+    }
   };
 
-  
   const handlePlantsClick = (e) => {
     e.preventDefault();
     setShowPlants(true); // Set showAboutUs to true when "About Us" link is clicked
@@ -61,13 +63,38 @@ function ProductList({ onHomeClick }) {
           </a>
         </div>
       </NavBar>
-      <main className="main_container">
-        {!showCart ? (
-          <div className="product-grid"></div>
-        ) : (
-          <CartItem onContinueShopping={handleContinueShopping} />
-        )}
-      </main>
+
+      {!showCart ? (
+        <main className="main-container">
+          {plantsArray.map((categoryGroup, index) => {
+            const sectionId = categoryGroup.category
+              .toLowerCase()
+              .replace(/\s+/g, "-");
+
+              return(
+                <section key={index} id={sectionId} className="section-container"><h2>{categoryGroup.category}</h2>
+                
+                <div className="product-list">
+                    {categoryGroup.plants.map((plant, plantIndex) => (
+                        <div className="product-card" key={plantIndex}>
+                            <img className="product-image " src={plant.image} alt={plant.name} loading="lazy" />
+                            <p className="product-title">{plant.name}</p>
+                            <span className="product-description">{plant.description}</span>
+                            <p className="product-price">R${plant.cost},00</p>
+                            <div className="button-container">
+                                <button className="product-button">Comprar</button>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+                
+                </section>
+              )
+          })}
+        </main>
+      ) : (
+        <CartItem onContinueShopping={handleContinueShopping} />
+      )}
     </div>
   );
 }

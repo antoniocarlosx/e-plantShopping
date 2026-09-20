@@ -1,6 +1,6 @@
 [
   {
-    "category": "Plantas Purificadoras de Ar",
+    "category": "Purificadoras de Ar",
     "plants": [
       {
         "name": "Espada-de-São-Jorge",
@@ -41,7 +41,7 @@
     ]
   },
   {
-    "category": "Plantas Aromáticas e Fragrantes",
+    "category": "Aromáticas e Fragrantes",
     "plants": [
       {
         "name": "Lavanda",
@@ -82,7 +82,7 @@
     ]
   },
   {
-    "category": "Plantas Repelentes de Insetos",
+    "category": "Repelentes de Insetos",
     "plants": [
       {
         "name": "Orégano",
@@ -123,7 +123,7 @@
     ]
   },
   {
-    "category": "Plantas Medicinais",
+    "category": "Medicinais",
     "plants": [
       {
         "name": "Babosa Medicinal",
@@ -164,7 +164,7 @@
     ]
   },
   {
-    "category": "Plantas de Baixa Manutenção",
+    "category": "Baixa Manutenção",
     "plants": [
       {
         "name": "Zamioculca",
