@@ -2,7 +2,9 @@ import React, { useState, useEffect } from "react";
 import "./ProductList.css";
 import CartItem from "./CartItem";
 import NavBar from "./NavBar";
+import GoHomeBtn from "./GoHomeBtn"
 import plants from "./plants.json";
+
 
 function ProductList({ onHomeClick }) {
   const [showCart, setShowCart] = useState(false);
@@ -91,6 +93,8 @@ function ProductList({ onHomeClick }) {
                 </section>
               )
           })}
+
+          <GoHomeBtn href={'#home'}/>
         </main>
       ) : (
         <CartItem onContinueShopping={handleContinueShopping} />

@@ -1,0 +1,25 @@
+.iconbutton {
+  margin: 2rem;
+  width: 40px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+
+  border-radius: 100%;
+
+  position: fixed;
+  bottom: 40px;
+  right: 0;
+}
+
+.iconbutton svg {
+  width: 40px;
+}
+
+#go-home svg path {
+  fill: var(--btn-bg);
+}
+
+#go-home:hover svg path {
+  fill: var(--btn-bg-hover);
+}
