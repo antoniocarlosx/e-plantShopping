@@ -3,36 +3,42 @@
     "category": "Purificadoras de Ar",
     "plants": [
       {
+        "id": 1,
         "name": "Espada-de-São-Jorge",
         "image": "https://cdn.pixabay.com/photo/2021/01/22/06/04/snake-plant-5939187_1280.jpg",
         "description": "Produz oxigénio durante a noite, melhorando a qualidade do ar.",
         "cost": 15
       },
       {
+        "id": 2,
         "name": "Clorofito",
         "image": "https://cdn.pixabay.com/photo/2018/07/11/06/47/chlorophytum-3530413_1280.jpg",
         "description": "Filtra o formaldeído e o xileno do ar.",
         "cost": 12
       },
       {
+        "id": 3,
         "name": "Lírio-da-Paz",
         "image": "https://cdn.pixabay.com/photo/2019/06/12/14/14/peace-lilies-4269365_1280.jpg",
         "description": "Remove esporos de bolor e purifica o ar envolvente.",
         "cost": 18
       },
       {
+        "id": 4,
         "name": "Samambaia-de-Boston",
         "image": "https://cdn.pixabay.com/photo/2020/04/30/19/52/boston-fern-5114414_1280.jpg",
         "description": "Adiciona humidade ao ar e retira toxinas presentes.",
         "cost": 20
       },
       {
+        "id": 5,
         "name": "Ficus Elastica",
         "image": "https://cdn.pixabay.com/photo/2020/02/15/11/49/flower-4850729_1280.jpg",
         "description": "Fácil de cuidar e altamente eficiente na remoção de toxinas.",
         "cost": 17
       },
       {
+        "id": 6,
         "name": "Babosa",
         "image": "https://cdn.pixabay.com/photo/2018/04/02/07/42/leaf-3283175_1280.jpg",
         "description": "Purifica o ar e tem propriedades regeneradoras para a pele.",
@@ -44,36 +50,42 @@
     "category": "Aromáticas e Fragrantes",
     "plants": [
       {
+        "id": 7,
         "name": "Lavanda",
         "image": "https://images.unsplash.com/photo-1611909023032-2d6b3134ecba?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         "description": "Aroma calmante, amplamente utilizado em aromaterapia.",
         "cost": 20
       },
       {
+        "id": 8,
         "name": "Jasmim",
         "image": "https://images.unsplash.com/photo-1592729645009-b96d1e63d14b?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         "description": "Fragrância doce e suave que incentiva o relaxamento.",
         "cost": 18
       },
       {
+        "id": 9,
         "name": "Alecrim",
         "image": "https://cdn.pixabay.com/photo/2019/10/11/07/12/rosemary-4541241_1280.jpg",
         "description": "Fragrância revigorante, ideal para culinária e infusões.",
         "cost": 15
       },
       {
+        "id": 10,
         "name": "Hortelã",
         "image": "https://cdn.pixabay.com/photo/2016/01/07/18/16/mint-1126282_1280.jpg",
         "description": "Aroma refrescante, muito utilizado em chás e preparações culinárias.",
         "cost": 12
       },
       {
+        "id": 11,
         "name": "Erva-Cidreira",
         "image": "https://cdn.pixabay.com/photo/2019/09/16/07/41/balm-4480134_1280.jpg",
         "description": "Fragrância cítrica que alivia a tensão e ajuda no descanso.",
         "cost": 14
       },
       {
+        "id": 12,
         "name": "Jacinto",
         "image": "https://cdn.pixabay.com/photo/2019/04/07/20/20/hyacinth-4110726_1280.jpg",
         "description": "Planta com floração marcante, reconhecida pelo aroma adocicado.",
@@ -85,36 +97,42 @@
     "category": "Repelentes de Insetos",
     "plants": [
       {
+        "id": 13,
         "name": "Orégano",
         "image": "https://cdn.pixabay.com/photo/2015/05/30/21/20/oregano-790702_1280.jpg",
         "description": "Possui propriedades aromáticas que afastam pragas comuns do jardim.",
         "cost": 10
       },
       {
+        "id": 14,
         "name": "Cravo-de-Defunto",
         "image": "https://cdn.pixabay.com/photo/2022/02/22/05/45/marigold-7028063_1280.jpg",
         "description": "Repelente botânico natural que traz cores vivas ao ambiente.",
         "cost": 8
       },
       {
+        "id": 15,
         "name": "Gerânio",
         "image": "https://cdn.pixabay.com/photo/2012/04/26/21/51/flowerpot-43270_1280.jpg",
         "description": "Ajuda a manter insetos afastados com o seu aroma característico.",
         "cost": 20
       },
       {
+        "id": 16,
         "name": "Manjericão",
         "image": "https://cdn.pixabay.com/photo/2016/07/24/20/48/tulsi-1539181_1280.jpg",
         "description": "Repele mosquitos e moscas, sendo essencial em preparos gastronómicos.",
         "cost": 9
       },
       {
+        "id": 17,
         "name": "Lavanda Repelente",
         "image": "https://images.unsplash.com/photo-1611909023032-2d6b3134ecba?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         "description": "Além de relaxante, mantém traças e mosquitos distantes.",
         "cost": 20
       },
       {
+        "id": 18,
         "name": "Erva-dos-Gatos",
         "image": "https://cdn.pixabay.com/photo/2015/07/02/21/55/cat-829681_1280.jpg",
         "description": "Afasta mosquitos de forma natural e encanta os felinos.",
@@ -126,36 +144,42 @@
     "category": "Medicinais",
     "plants": [
       {
+        "id": 19,
         "name": "Babosa Medicinal",
         "image": "https://cdn.pixabay.com/photo/2018/04/02/07/42/leaf-3283175_1280.jpg",
         "description": "Gel hidratante e suavizante para queimaduras e irritações cutâneas.",
         "cost": 14
       },
       {
+        "id": 20,
         "name": "Equinácea",
         "image": "https://cdn.pixabay.com/photo/2014/12/05/03/53/echinacea-557477_1280.jpg",
         "description": "Auxilia as defesas do organismo e o sistema imunitário.",
         "cost": 16
       },
       {
+        "id": 21,
         "name": "Hortelã-Pimenta",
         "image": "https://cdn.pixabay.com/photo/2017/07/12/12/23/peppermint-2496773_1280.jpg",
         "description": "Alivia desconfortos gastrointestinais e sensação de peso na cabeça.",
         "cost": 13
       },
       {
+        "id": 22,
         "name": "Erva-Cidreira Medicinal",
         "image": "https://cdn.pixabay.com/photo/2019/09/16/07/41/balm-4480134_1280.jpg",
         "description": "Atua como calmante botânico, reduzindo o nervosismo.",
         "cost": 14
       },
       {
+        "id": 23,
         "name": "Camomila",
         "image": "https://cdn.pixabay.com/photo/2016/08/19/19/48/flowers-1606041_1280.jpg",
         "description": "Diminui estados de agitação e proporciona noites de sono tranquilas.",
         "cost": 15
       },
       {
+        "id": 24,
         "name": "Calêndula",
         "image": "https://cdn.pixabay.com/photo/2019/07/15/18/28/flowers-4340127_1280.jpg",
         "description": "Propriedades cicatrizantes e anti-inflamatórias para a pele.",
@@ -167,36 +191,42 @@
     "category": "Baixa Manutenção",
     "plants": [
       {
+        "id": 25,
         "name": "Zamioculca",
         "image": "https://images.unsplash.com/photo-1632207691143-643e2a9a9361?q=80&w=464&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         "description": "Suporta locais com pouca luminosidade e regas bastante espaçadas.",
         "cost": 25
       },
       {
+        "id": 26,
         "name": "Jiboia",
         "image": "https://cdn.pixabay.com/photo/2018/11/15/10/32/plants-3816945_1280.jpg",
         "description": "Adapta-se a múltiplos ambientes sem exigir cuidados constantes.",
         "cost": 10
       },
       {
+        "id": 27,
         "name": "Espada-de-São-Jorge Rústica",
         "image": "https://cdn.pixabay.com/photo/2021/01/22/06/04/snake-plant-5939187_1280.jpg",
         "description": "Tolera períodos sem rega e resiste à maioria das pragas comuns.",
         "cost": 15
       },
       {
+        "id": 28,
         "name": "Aspidistra",
         "image": "https://cdn.pixabay.com/photo/2017/02/16/18/04/cast-iron-plant-2072008_1280.jpg",
         "description": "Espécie muito resistente que cresce em condições de sombra.",
         "cost": 20
       },
       {
+        "id": 29,
         "name": "Suculentas Variadas",
         "image": "https://cdn.pixabay.com/photo/2016/11/21/16/05/cacti-1846147_1280.jpg",
         "description": "Retêm humidade nas folhas e toleram a escassez de regas regulares.",
         "cost": 18
       },
       {
+        "id": 30,
         "name": "Café-de-Salão",
         "image": "https://cdn.pixabay.com/photo/2014/10/10/04/27/aglaonema-482915_1280.jpg",
         "description": "Requer atenção mínima e decora áreas internas com folhagens contrastantes.",

@@ -2,13 +2,17 @@ import React, { useState, useEffect } from "react";
 import "./ProductList.css";
 import CartItem from "./CartItem";
 import NavBar from "./NavBar";
-import GoHomeBtn from "./GoHomeBtn"
-import plants from "./plants.json";
+import GoHomeBtn from "./GoHomeBtn";
 
+import plants from "./plants.json";
+import { useDispatch } from "react-redux";
+import { addItem } from "./CartSlice";
 
 function ProductList({ onHomeClick }) {
+  const dispatch = useDispatch();
   const [showCart, setShowCart] = useState(false);
   const [showPlants, setShowPlants] = useState(false);
+  const [addedToCart, setAddedToCart] = useState()
 
   const plantsArray = plants;
 
@@ -45,6 +49,18 @@ function ProductList({ onHomeClick }) {
     setShowCart(false);
   };
 
+ const handleAddToCart = (product) => {
+  dispatch(addItem(product)); // Dispatch the action to add the product to the cart (Redux action)
+
+  setAddedToCart((prevState) => ({ 
+    ...prevState,
+    [product.name]: true, 
+  }));
+};
+
+    
+  
+
   return (
     <div className="product-list-page">
       <NavBar links={navLinks} appName={"Paradise Nursery"} iconLink={iconLink}>
@@ -73,28 +89,40 @@ function ProductList({ onHomeClick }) {
               .toLowerCase()
               .replace(/\s+/g, "-");
 
-              return(
-                <section key={index} id={sectionId} className="section-container"><h2>{categoryGroup.category}</h2>
-                
+            return (
+              <section key={index} id={sectionId} className="section-container">
+                <h2>{categoryGroup.category}</h2>
+
                 <div className="product-list">
-                    {categoryGroup.plants.map((plant, plantIndex) => (
-                        <div className="product-card" key={plantIndex}>
-                            <img className="product-image " src={plant.image} alt={plant.name} loading="lazy" />
-                            <p className="product-title">{plant.name}</p>
-                            <span className="product-description">{plant.description}</span>
-                            <p className="product-price">R${plant.cost},00</p>
-                            <div className="button-container">
-                                <button className="product-button">Comprar</button>
-                            </div>
-                        </div>
-                    ))}
+                  {categoryGroup.plants.map((plant, plantIndex) => (
+                    <div className="product-card" key={plantIndex}>
+                      <img
+                        className="product-image "
+                        src={plant.image}
+                        alt={plant.name}
+                        loading="lazy"
+                      />
+                      <p className="product-title">{plant.name}</p>
+                      <span className="product-description">
+                        {plant.description}
+                      </span>
+                      <p className="product-price">R${plant.cost},00</p>
+                      <div className="button-container">
+                        <button
+                          className="product-button"
+                          onClick={() => handleAddToCart(plant)}
+                        >
+                          Adicionar ao Carrinho
+                        </button>
+                      </div>
+                    </div>
+                  ))}
                 </div>
-                
-                </section>
-              )
+              </section>
+            );
           })}
 
-          <GoHomeBtn href={'#home'}/>
+          <GoHomeBtn href={"#home"} />
         </main>
       ) : (
         <CartItem onContinueShopping={handleContinueShopping} />
