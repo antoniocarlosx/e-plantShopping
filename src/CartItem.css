@@ -232,6 +232,92 @@
   }
 }
 
+.print-btn {
+  display: flex;
+  justify-content: end;
+  padding: 8px 14px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  background-color: var(--btn-bg);
+  color: var(--btn-text);
+  white-space: nowrap;
+  transition:
+    background-color 0.15s ease,
+    color 0.15s ease;
+}
+
+.print-btn:hover {
+  background-color: var(--btn-bg-hover);
+  color: var(--btn-text);
+}
+
+@media print {
+  .print-btn,
+  .get-started-button1,
+  .cart-item-button,
+  .cart-item-delete {
+    display: none;
+  }
+
+  body {
+    background: white !important;
+    color: black !important;
+    margin: 0;
+    padding: 20px;
+  }
+
+  .cart-grid{
+    display: flex;
+    gap: 20px;
+    
+  }
+
+   /* 3. Organiza cada item do carrinho como um bloco flexível no papel */
+  .cart-item {
+    display: flex !important;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+    padding: 15px 0;
+    page-break-inside: avoid; /* Evita que o item quebre no meio de duas páginas */
+  }
+
+  /* 4. Formata a imagem para não ficar gigante */
+  .cart-item-image {
+    width: 120px !important;    /* Força uma largura fixa elegante na impressão */
+    height: 120px !important;   /* Força altura idêntica */
+    object-fit: contain !important;
+    margin-right: 20px !important;
+  }
+
+  /* 5. Alinha os textos ao lado da foto e garante visibilidade */
+  .cart-item-details {
+    display: flex !important;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  /* 6. Formata os textos para ficarem legíveis e organizados */
+  .cart-item-name {
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+
+  .cart-item-cost, 
+  .cart-item-quantity, 
+  .cart-item-total {
+    font-size: 1rem;
+  }
+
+  /* Exibe o texto da quantidade de forma limpa, já que os botões somem */
+  .cart-item-quantity::before {
+    content: "Quantidade: ";
+    font-weight: 500;
+  }
+}
+
 .get-started-button1 {
   padding: 15px 75px;
   font-size: 23px;

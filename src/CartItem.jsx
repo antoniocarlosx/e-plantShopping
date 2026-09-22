@@ -16,7 +16,9 @@ const CartItem = ({ onContinueShopping }) => {
     return totalAmount;
   };
 
-  const handleContinueShopping = (e) => {};
+  const handleContinueShopping = (e) => {
+    onContinueShopping(e)
+  };
 
   const handleIncrement = (item) => {
     dispatch(incrementQuantity(item));
@@ -45,7 +47,7 @@ const CartItem = ({ onContinueShopping }) => {
       ) : (
         <span>Carrinho Vazio</span>
       )}
-      <div>
+      <div className="cart-grid">
         {cart.map((item) => (
           <div className="cart-item" key={item.name}>
             <img className="cart-item-image" src={item.image} alt={item.name} />
@@ -87,12 +89,7 @@ const CartItem = ({ onContinueShopping }) => {
         className="total_cart_amount"
       ></div>
       <div className="continue_shopping_btn">
-        <button
-          className="get-started-button"
-          onClick={(e) => handleContinueShopping(e)}
-        >
-          Continuar Comprando
-        </button>
+         <button onClick={ () => window.print()} className="print-btn">Baixar Orçamento (PDF)</button>
         <br />
         <button className="get-started-button1">Pagar</button>
       </div>
