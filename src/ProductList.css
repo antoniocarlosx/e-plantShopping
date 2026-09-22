@@ -215,6 +215,21 @@ body {
   background-color: #45a049;
 }
 
+.fixed-btns {
+  position: fixed;
+  
+  right: 20px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  margin: 0;
+
+  border-radius: 100%;
+
+  bottom: 40px;
+  flex-direction: column;
+}
+
 .product-button.added-to-cart {
   background-color: grey; /* Grey when product is added */
 }

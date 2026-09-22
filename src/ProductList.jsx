@@ -3,7 +3,7 @@ import "./ProductList.css";
 import CartItem from "./CartItem";
 import NavBar from "./NavBar";
 import GoHomeBtn from "./GoHomeBtn";
-
+import GoCartBtn from "./GoCartBtn";
 import plants from "./plants.json";
 import { useDispatch } from "react-redux";
 import { addItem } from "./CartSlice";
@@ -12,7 +12,7 @@ function ProductList({ onHomeClick }) {
   const dispatch = useDispatch();
   const [showCart, setShowCart] = useState(false);
   const [showPlants, setShowPlants] = useState(false);
-  const [addedToCart, setAddedToCart] = useState()
+  const [addedToCart, setAddedToCart] = useState();
 
   const plantsArray = plants;
 
@@ -49,23 +49,20 @@ function ProductList({ onHomeClick }) {
     setShowCart(false);
   };
 
- const handleAddToCart = (product) => {
-  dispatch(addItem(product)); // Dispatch the action to add the product to the cart (Redux action)
+  const handleAddToCart = (product) => {
+    dispatch(addItem(product)); // Dispatch the action to add the product to the cart (Redux action)
 
-  setAddedToCart((prevState) => ({ 
-    ...prevState,
-    [product.name]: true, 
-  }));
-};
-
-    
-  
+    setAddedToCart((prevState) => ({
+      ...prevState,
+      [product.name]: true,
+    }));
+  };
 
   return (
     <div className="product-list-page">
       <NavBar links={navLinks} appName={"Paradise Nursery"} iconLink={iconLink}>
         <div className="cart-link-container">
-          <a href="#" className="cart-link" onClick={handleCartClick}>
+          <a href="#cart" className="cart-link" onClick={handleCartClick}>
             <span className="cart">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -122,7 +119,10 @@ function ProductList({ onHomeClick }) {
             );
           })}
 
-          <GoHomeBtn href={"#home"} />
+          <div className="fixed-btns">
+            <GoHomeBtn href={"#home"} />
+            <GoCartBtn onAction={handleCartClick} />
+          </div>
         </main>
       ) : (
         <CartItem onContinueShopping={handleContinueShopping} />

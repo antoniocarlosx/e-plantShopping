@@ -1,14 +1,7 @@
 .iconbutton {
   margin: 2rem;
   width: 40px;
-  align-items: center;
-  justify-content: center;
-  display: flex;
-
-  border-radius: 100%;
-
-  position: fixed;
-  bottom: 40px;
+ 
   right: 0;
 }
 

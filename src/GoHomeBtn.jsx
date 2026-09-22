@@ -2,6 +2,7 @@ import React from "react";
 import "./GoHomeBtn.css"
 
 const GoHomeBtn = ({href}) => {
+  
   return (
     <>
       <div id="go-home" className="iconbutton">
