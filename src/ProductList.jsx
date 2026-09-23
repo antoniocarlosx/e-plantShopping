@@ -100,7 +100,7 @@ function ProductList({ onHomeClick }) {
 
           <div className="fixed-btns">
             <GoHomeBtn href={"#home"} />
-            <GoCartBtn onAction={handleCartClick} />
+            <GoCartBtn onAction={handleCartClick} inCart={cartItems.length}/>
           </div>
         </main>
       ) : (

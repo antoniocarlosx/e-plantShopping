@@ -23,3 +23,25 @@
 #go-cart:hover svg path {
   fill: var(--bg-main);
 }
+
+.cart-link-container{
+  display: flex;
+  gap: 0px;
+}
+
+
+.number-itens{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  background-color: darkred;
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+  padding: 0.6rem;
+  font-size: 0.75rem;
+  text-align: center;
+  color: white;
+}
