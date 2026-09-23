@@ -92,9 +92,14 @@ const CartItem = ({ onContinueShopping }) => {
           Continuar Comprando
         </button>
         <br />
+        {cart && cart.length > 0 ? (
         <button onClick={() => window.print()} className="print-btn">
           Baixar Orçamento (PDF)
         </button>
+      ) : (
+        <span>Ops! Seu carrinho está vazio!</span>
+      )}
+        
       </div>
     </div>
   );
