@@ -197,7 +197,7 @@ body {
 }
 /* ProductList.css */
 
-.product-button {
+.product-button, .btn-warning {
   background-color: #4caf50; /* Green */
   border: none;
   color: white;
@@ -210,14 +210,18 @@ body {
   transition-duration: 0.4s;
   cursor: pointer;
 }
-
+.btn-disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  transform: none !important;
+}
 .product-button:hover {
   background-color: #45a049;
 }
 
 .fixed-btns {
   position: fixed;
-  
+
   right: 20px;
   align-items: center;
   justify-content: center;

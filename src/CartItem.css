@@ -232,7 +232,8 @@
   }
 }
 
-.print-btn {
+.print-btn,
+.get-started-button1 {
   display: flex;
   justify-content: end;
   padding: 8px 14px;
@@ -241,14 +242,26 @@
   border: none;
   border-radius: 6px;
   cursor: pointer;
-  background-color: var(--btn-bg);
-  color: var(--btn-text);
+
   white-space: nowrap;
   transition:
     background-color 0.15s ease,
     color 0.15s ease;
 }
 
+.get-started-button1 {
+  background-color: var(--text-muted);
+  color: var(--btn-text);
+}
+
+.get-started-button1:hover{
+  background-color: var(--accent);
+  color: var(--btn-text);
+}
+.print-btn {
+  background-color: var(--btn-bg);
+  color: var(--btn-text);
+}
 .print-btn:hover {
   background-color: var(--btn-bg-hover);
   color: var(--btn-text);
@@ -269,25 +282,32 @@
     padding: 20px;
   }
 
-  .cart-grid{
-    display: flex;
-    gap: 20px;
-    
+  .cart-grid {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 20px !important;
+    max-width: 100% !important;
+    justify-content: flex-start;
   }
 
-   /* 3. Organiza cada item do carrinho como um bloco flexível no papel */
+  /* 3. Organiza cada item do carrinho como um bloco flexível no papel */
   .cart-item {
     display: flex !important;
-    align-items: center;
-    border-bottom: 1px solid #ccc;
-    padding: 15px 0;
-    page-break-inside: avoid; /* Evita que o item quebre no meio de duas páginas */
+    flex-direction: column !important; 
+    align-items: center !important;
+    text-align: center !important;
+    width: calc(20% - 20px) !important; /
+    box-sizing: border-box !important;
+    border-bottom: 1px solid #ccc !important;
+    padding: 10px 0 !important;
+    page-break-inside: avoid;
+    break-inside: avoid;
   }
 
   /* 4. Formata a imagem para não ficar gigante */
   .cart-item-image {
-    width: 120px !important;    /* Força uma largura fixa elegante na impressão */
-    height: 120px !important;   /* Força altura idêntica */
+    width: 120px !important; /* Força uma largura fixa elegante na impressão */
+    height: 120px !important; /* Força altura idêntica */
     object-fit: contain !important;
     margin-right: 20px !important;
   }
@@ -305,8 +325,8 @@
     font-weight: bold;
   }
 
-  .cart-item-cost, 
-  .cart-item-quantity, 
+  .cart-item-cost,
+  .cart-item-quantity,
   .cart-item-total {
     font-size: 1rem;
   }
@@ -318,6 +338,7 @@
   }
 }
 
+/*
 .get-started-button1 {
   padding: 15px 75px;
   font-size: 23px;
@@ -329,3 +350,4 @@
   transition: background-color 0.3s ease;
   margin-top: 40px;
 }
+*/

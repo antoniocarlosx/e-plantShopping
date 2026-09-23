@@ -4,15 +4,18 @@ import CartItem from "./CartItem";
 import NavBar from "./NavBar";
 import GoHomeBtn from "./GoHomeBtn";
 import GoCartBtn from "./GoCartBtn";
+import ProductCard from "./ProductCard"
 import plants from "./plants.json";
-import { useDispatch } from "react-redux";
-import { addItem } from "./CartSlice";
+import { useDispatch, useSelector } from "react-redux";
+import { addItem } from "./cartSlice";
 
 function ProductList({ onHomeClick }) {
   const dispatch = useDispatch();
+  const cartItems = useSelector((state) => state.cart.items)
+
   const [showCart, setShowCart] = useState(false);
   const [showPlants, setShowPlants] = useState(false);
-  const [addedToCart, setAddedToCart] = useState();
+  //const [addedToCart, setAddedToCart] = useState({});
 
   const plantsArray = plants;
 
@@ -52,10 +55,7 @@ function ProductList({ onHomeClick }) {
   const handleAddToCart = (product) => {
     dispatch(addItem(product)); // Dispatch the action to add the product to the cart (Redux action)
 
-    setAddedToCart((prevState) => ({
-      ...prevState,
-      [product.name]: true,
-    }));
+   
   };
 
   return (
@@ -85,34 +85,22 @@ function ProductList({ onHomeClick }) {
             const sectionId = categoryGroup.category
               .toLowerCase()
               .replace(/\s+/g, "-");
+              
 
             return (
               <section key={index} id={sectionId} className="section-container">
                 <h2>{categoryGroup.category}</h2>
 
                 <div className="product-list">
-                  {categoryGroup.plants.map((plant, plantIndex) => (
-                    <div className="product-card" key={plantIndex}>
-                      <img
-                        className="product-image "
-                        src={plant.image}
-                        alt={plant.name}
-                        loading="lazy"
-                      />
-                      <p className="product-title">{plant.name}</p>
-                      <span className="product-description">
-                        {plant.description}
-                      </span>
-                      <p className="product-price">R${plant.cost},00</p>
-                      <div className="button-container">
-                        <button
-                          className="product-button"
-                          onClick={() => handleAddToCart(plant)}
-                        >
-                          Adicionar ao Carrinho
-                        </button>
-                      </div>
-                    </div>
+                  {categoryGroup.plants.map((plant) => (
+
+                  
+                    <ProductCard 
+                    key={plant.id}
+                    plant={plant}
+                    isAdded={cartItems.some((item) => item.id === plant.id)}
+                    onAddToCart={() => handleAddToCart(plant)}
+                    />
                   ))}
                 </div>
               </section>
