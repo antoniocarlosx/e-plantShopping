@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./NavBar.css";
 
-const NavBar = ({ links, appName, iconLink, children }) => {
+const NavBar = ({ links, appName, iconLink, children, onAction }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -10,7 +10,7 @@ const NavBar = ({ links, appName, iconLink, children }) => {
         <div className="nav-title">
           <div className="title-container">
             <img className="app-icon" src={iconLink} alt={appName} />
-            <span id="home" className="app-name">
+            <span id="home" className="app-name" onClick={onAction}>
               {appName}
             </span>
             

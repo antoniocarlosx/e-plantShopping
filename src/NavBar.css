@@ -128,7 +128,9 @@
 @media (min-width: 860px) {
   .navbar-header {
     flex-wrap: nowrap;
-    padding: 0.8rem 2rem;
+    padding: 0.8rem 1.5rem;
+    justify-content: space-between;
+    gap: 15px;
   }
 
   .app-name {
@@ -167,6 +169,6 @@
   }
 
   .nav-link{
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
 }

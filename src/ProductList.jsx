@@ -4,18 +4,18 @@ import CartItem from "./CartItem";
 import NavBar from "./NavBar";
 import GoHomeBtn from "./GoHomeBtn";
 import GoCartBtn from "./GoCartBtn";
-import ProductCard from "./ProductCard"
+import ProductCard from "./ProductCard";
 import plants from "./plants.json";
 import { useDispatch, useSelector } from "react-redux";
 import { addItem } from "./cartSlice";
 
 function ProductList({ onHomeClick }) {
   const dispatch = useDispatch();
-  const cartItems = useSelector((state) => state.cart.items)
+  const cartItems = useSelector((state) => state.cart.items);
 
   const [showCart, setShowCart] = useState(false);
-  const [showPlants, setShowPlants] = useState(false);
-  //const [addedToCart, setAddedToCart] = useState({});
+  
+ 
 
   const plantsArray = plants;
 
@@ -41,11 +41,7 @@ function ProductList({ onHomeClick }) {
     }
   };
 
-  const handlePlantsClick = (e) => {
-    e.preventDefault();
-    setShowPlants(true); // Set showAboutUs to true when "About Us" link is clicked
-    setShowCart(false); // Hide the cart when navigating to About Us
-  };
+ 
 
   const handleContinueShopping = (e) => {
     e.preventDefault();
@@ -54,13 +50,11 @@ function ProductList({ onHomeClick }) {
 
   const handleAddToCart = (product) => {
     dispatch(addItem(product)); // Dispatch the action to add the product to the cart (Redux action)
-
-   
   };
 
   return (
     <div className="product-list-page">
-      <NavBar links={navLinks} appName={"Paradise Nursery"} iconLink={iconLink}>
+      <NavBar links={navLinks} appName={"Paradise Nursery"} iconLink={iconLink} onAction={handleHomeClick}>
         <div className="cart-link-container">
           <a href="#cart" className="cart-link" onClick={handleCartClick}>
             <span className="cart">
@@ -68,7 +62,7 @@ function ProductList({ onHomeClick }) {
                 xmlns="http://www.w3.org/2000/svg"
                 width="35"
                 height="25"
-                fill="currentColor"
+                fill="white"
                 className="bi bi-cart"
                 viewBox="0 0 16 16"
               >
@@ -85,7 +79,6 @@ function ProductList({ onHomeClick }) {
             const sectionId = categoryGroup.category
               .toLowerCase()
               .replace(/\s+/g, "-");
-              
 
             return (
               <section key={index} id={sectionId} className="section-container">
@@ -93,13 +86,11 @@ function ProductList({ onHomeClick }) {
 
                 <div className="product-list">
                   {categoryGroup.plants.map((plant) => (
-
-                  
-                    <ProductCard 
-                    key={plant.id}
-                    plant={plant}
-                    isAdded={cartItems.some((item) => item.id === plant.id)}
-                    onAddToCart={() => handleAddToCart(plant)}
+                    <ProductCard
+                      key={plant.id}
+                      plant={plant}
+                      isAdded={cartItems.some((item) => item.id === plant.id)}
+                      onAddToCart={() => handleAddToCart(plant)}
                     />
                   ))}
                 </div>
